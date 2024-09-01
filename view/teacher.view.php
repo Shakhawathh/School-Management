@@ -8,7 +8,8 @@
 
 <main class="flex-1 p-10">
     <h1 class="text-3xl font-bold text-gray-800"><?=$heading?></h1>
-
+    <p class="mt-4 text-gray-600">This is the main content area. You can put your charts, tables, or any other data
+        here.</p>
 
     <!-- Example content -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">

@@ -25,13 +25,13 @@
                         </a>
                     </li>
                     <li class="rounded-sm">
-                        <a href="#" class="flex items-center p-2 space-x-3 rounded-md hover:bg-gray-700">
+                        <a href="teacher.php" class="flex items-center p-2 space-x-3 rounded-md hover:bg-gray-700">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M9 5v2H7v14h10V7h-2V5H9zm2-2h2v2h-2V3z" />
                             </svg>
-                            <span>Live Class</span>
+                            <span>Teacher</span>
                         </a>
                     </li>
                     <li class="rounded-sm">
