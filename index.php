@@ -1,7 +1,1 @@
-
-
-<?php
-
-
-
-require "login.php";
+<?php require "controllers/index.php";
