@@ -1,5 +1,5 @@
 <?php
 
-$heading = "Teacher";
+$heading = 'Teacher';
 
-require '../view/student.view.php';
+require 'view/student.view.php';

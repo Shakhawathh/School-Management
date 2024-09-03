@@ -5,7 +5,7 @@
             <div class="flex-1">
                 <ul class="pt-2 pb-4 space-y-1 text-sm">
                     <li class="rounded-sm">
-                        <a href="index.php" class="flex items-center p-2 space-x-3 rounded-md hover:bg-gray-700">
+                        <a href="/" class="<?= urlIs('/') ? 'bg-gray-900 text-white ' : '' ?>  flex items-center p-2 space-x-3 rounded-md hover:bg-gray-700">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -15,7 +15,7 @@
                         </a>
                     </li>
                     <li class="rounded-sm">
-                        <a href="student.php" class="flex items-center p-2 space-x-3 rounded-md hover:bg-gray-700">
+                        <a href="/student" class=" <?= urlIs('/student') ? 'bg-gray-900 text-white ' : '' ?> flex items-center p-2 space-x-3 rounded-md hover:bg-gray-700">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -25,7 +25,7 @@
                         </a>
                     </li>
                     <li class="rounded-sm">
-                        <a href="teacher.php" class="flex items-center p-2 space-x-3 rounded-md hover:bg-gray-700">
+                        <a href="/teacher" class="<?= urlIs('/teacher') ? 'bg-gray-900 text-white ' : '' ?> flex items-center p-2 space-x-3 rounded-md hover:bg-gray-700">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

@@ -1,9 +1,8 @@
 <?php
 
-require './view/partials/head.php';
-require './view/partials/nav.php';
-require './view/partials/sidebar.php';
-
+require(__DIR__ . '/partials/head.php');
+require(__DIR__ . '/partials/nav.php');
+require(__DIR__ . '/partials/sidebar.php');
 ?>
 
 <main class="flex-1 p-10">
@@ -24,5 +23,5 @@ require './view/partials/sidebar.php';
 </main>
 
 <?php
-require './view/partials/footer.php';
+require('/../xampp/htdocs/School-Management/view/partials/footer.php');
 ?>

@@ -1,1 +1,4 @@
-<?php require "controllers/index.php";
+<?php
+
+require 'function.php';
+require 'route.php';
