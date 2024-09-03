@@ -45,7 +45,7 @@
             <div class="text-center">
                 <button type="submit" class="btn btn-primary w-full">Register</button>
                 <a class="inline-block align-baseline font-bold  mt-6 text-sm text-blue-500 hover:text-blue-800"
-                    href="login.php">Back to Login</a>
+                    href="login">Back to Login</a>
             </div>
         </form>
     </div>

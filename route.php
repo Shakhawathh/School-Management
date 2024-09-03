@@ -6,6 +6,8 @@ $routes = [
     '/' => 'controllers/home.php',
     '/student' => 'controllers/student.php',
     '/teacher' => 'controllers/teacher.php',
+    '/login' => 'auth/login.php',
+    '/register' => 'auth/register.php',
 ];
 
 

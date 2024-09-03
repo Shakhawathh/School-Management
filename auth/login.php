@@ -35,7 +35,7 @@
 
 
             <div class="text-center">
-                <p class="text-sm">Don't have an account? <a href="register.php"
+                <p class="text-sm">Don't have an account? <a href="register"
                         class="text-blue-500 hover:underline">Registration</a>
                 </p>
             </div>
