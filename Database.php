@@ -9,9 +9,9 @@ class Database
         $dsn = "mysql:
         host=localhost;
         port=3306;
-        dbname=school-management";
+        dbname=school_management";
 
-        $this->connection = new PDO($dsn, 'root');
+        $this->connection = new PDO($dsn, 'root', );
     }
 
     public function query($query)

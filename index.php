@@ -1,7 +1,7 @@
 <?php
 
 require 'function.php';
-// require 'route.php';
+require 'route.php';
 require 'Database.php';
 
 $db = new Database();
