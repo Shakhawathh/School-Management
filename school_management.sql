@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 06, 2024 at 11:26 PM
+-- Generation Time: Sep 07, 2024 at 12:13 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -94,7 +94,21 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`student_id`, `first_name`, `last_name`, `date_of_birth`, `gender`, `grade`, `email`) VALUES
-(1, 'Hasan', 'Hossain', NULL, NULL, NULL, '');
+(2, 'John', 'Doe', '2005-03-15', 'Male', 10, 'john.doe@example.com'),
+(3, 'Jane', 'Smith', '2006-07-22', 'Female', 9, 'jane.smith@example.com'),
+(4, 'Michael', 'Johnson', '2004-11-30', 'Male', 11, 'michael.johnson@example.com'),
+(5, 'Emily', 'Davis', '2005-01-25', 'Female', 10, 'emily.davis@example.com'),
+(6, 'Daniel', 'Williams', '2007-02-10', 'Male', 8, 'daniel.williams@example.com'),
+(7, 'Sophia', 'Brown', '2006-05-19', 'Female', 9, 'sophia.brown@example.com'),
+(8, 'Matthew', 'Jones', '2004-12-03', 'Male', 12, 'matthew.jones@example.com'),
+(9, 'Olivia', 'Garcia', '2007-03-11', 'Female', 8, 'olivia.garcia@example.com'),
+(10, 'David', 'Martinez', '2005-09-05', 'Male', 10, 'david.martinez@example.com'),
+(11, 'Ava', 'Rodriguez', '2006-10-17', 'Female', 9, 'ava.rodriguez@example.com'),
+(12, 'James', 'Martins', '2007-01-20', 'Male', 8, 'james.martins@example.com'),
+(13, 'Mia', 'Clark', '2005-02-11', 'Female', 10, 'mia.clark@example.com'),
+(14, 'Alexander', 'Lopez', '2004-04-25', 'Male', 11, 'alexander.lopez@example.com'),
+(15, 'Isabella', 'Gonzalez', '2007-07-18', 'Female', 8, 'isabella.gonzalez@example.com'),
+(16, 'Christopher', 'Anderson', '2005-06-29', 'Male', 10, 'christopher.anderson@example.com');
 
 -- --------------------------------------------------------
 
@@ -188,7 +202,7 @@ ALTER TABLE `grades`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `teachers`
