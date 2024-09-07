@@ -10,12 +10,4 @@ $heading = 'Student';
 
 
 
-
-
-
-
-
-
-
-
-require './view/student.view.php';
+require './view/student/student.view.php';
