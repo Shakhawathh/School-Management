@@ -29,26 +29,24 @@
                     <li class="rounded-sm">
                         <a href="/teacher"
                             class="<?=urlIs('/teacher') ? 'bg-gray-900 text-white ' : ''?> flex items-center p-2 space-x-3 rounded-md hover:bg-gray-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 5v2H7v14h10V7h-2V5H9zm2-2h2v2h-2V3z" />
-                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 16h-1v-4h-1m-1 4v-4h3v6m0 0H9v2m4 0v-2h1" />
+                    </svg>
                             <span>Teacher</span>
                         </a>
                     </li>
-                    <li class="rounded-sm">
-                        <a href="notce" class="flex items-center p-2 space-x-3 rounded-md hover:bg-gray-700">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 14l-7 7-7-7" />
-                            </svg>
+                    <li class="rounded-sm ">
+                                            <a href="notice" class=" <?=urlIs('/notice') ? 'bg-gray-900 text-white  ' : ''?> flex  items-center p-2 space-x-3 rounded-md hover:bg-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" d="M18 8a6 6 0 10-12 0 6 6 0 0012 0zM9 8V4a1 1 0 112 0v4a1 1 0 11-2 0zM9 12a1 1 0 112 0 1 1 0 01-2 0z" clip-rule="evenodd" />
+                    </svg>
+                    
                             <span>Notice</span>
                         </a>
                     </li>
                     <li class="rounded-sm">
-                        <a href="#" class="flex items-center p-2 space-x-3 rounded-md hover:bg-gray-700">
+                        <a href="/course" class=" <?=urlIs('/course') ? 'bg-gray-900 text-white ' : ''?> flex items-center p-2 space-x-3 rounded-md hover:bg-gray-700">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

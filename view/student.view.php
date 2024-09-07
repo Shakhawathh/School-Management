@@ -20,10 +20,9 @@ require './view/partials/sidebar.php';
             <?php endif; ?>
         </div>
 
-        <div class="bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-xl font-semibold text-gray-800">Card 3</h2>
-            <p class="text-gray-600 mt-2">Some content for the third card.</p>
-        </div>
+        <a href="/"  class="bg-blue-300 p-6 rounded-lg shadow-md ">
+            <h2 class="text-xl font-semibold text-gray-800 text-center">Add Student +</h2>
+        </a>
         <div class="bg-white p-6 rounded-lg shadow-md">
             <h2 class="text-xl font-semibold text-gray-800">Card 3</h2>
             <p class="text-gray-600 mt-2">Some content for the third card.</p>
