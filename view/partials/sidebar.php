@@ -1,9 +1,9 @@
-<div class="flex h-screen">
+<div class="flex h-screen ">
     <!-- Sidebar -->
-    <div class="flex flex-col p-3 bg-gray-800 text-white w-64">
-        <div class="space-y-3">
-            <div class="flex-1">
-                <ul class="pt-2 pb-4 space-y-6 text-sm">
+    <div class="flex flex-col p-3 bg-gray-800 text-white w-64	">
+        <div class="space-y-3 fixed ">
+            <div class="flex-1 ">
+                <ul class="pt-2 pb-4 space-y-6 text-sm ">
                     <li class="rounded-sm">
                         <a href="/"
                             class="<?=urlIs('/') ? 'bg-gray-900 text-white ' : ''?>  flex items-center p-2 space-x-3 rounded-md hover:bg-gray-700">

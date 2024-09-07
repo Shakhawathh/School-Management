@@ -2,7 +2,7 @@
 
 $db = new Database();
 
-$students = $db->query("SELECT * FROM `students` where student_id = 3 ")->fetchAll();
+$students = $db->query("SELECT * FROM `students`  ")->fetchAll();
 
 // dd($students);
 

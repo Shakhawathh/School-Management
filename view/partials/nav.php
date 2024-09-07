@@ -1,4 +1,4 @@
-<nav class="bg-gray-800 text-white p-4 ">
+<nav class="bg-gray-800 text-white p-4 sticky top-0 w-full ">
     <div class="container mx-auto flex justify-between items-center">
         <div class="text-xl font-bold ">
             <a href="/">Dashboard</a>
