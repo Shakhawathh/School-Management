@@ -52,8 +52,8 @@ require './view/partials/sidebar.php';
                         <td><?= $teacher['subject'] ?></td>
                         <td>
                             <div class="dropdown">
-                                <div tabindex="0" class="btn m-1 btn-sm btn-success">Action</div>
-                                <ul tabindex="0" class="menu dropdown-content bg-white rounded-box z-[1] w-36 p-2 shadow border-2 font-bold">
+                            <div tabindex="0" class="btn m-1 btn-sm btn-success  text-white">Action</div>
+                            <ul tabindex="0" class="menu dropdown-content bg-white rounded-box z-[1] w-36 p-2 shadow border-2 font-bold">
                                     <li class="hover:bg-red-500 rounded"><a>Delete</a></li>
                                     <li class="hover:bg-gray-200 rounded"><a>Edit</a></li>
                                 </ul>
