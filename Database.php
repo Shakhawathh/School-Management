@@ -11,7 +11,7 @@ class Database
         port=3306;
         dbname=school_management";
 
-        $this->connection = new PDO($dsn, 'root', );
+        $this->connection = new PDO($dsn, 'root' );
     }
 
     public function query($query)

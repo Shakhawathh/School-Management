@@ -13,19 +13,18 @@ require './view/partials/sidebar.php';
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
 
     <div class="bg-green-300 p-6 rounded-lg shadow-md text-center ">
-    <?php if (!empty($teachers) && is_array($teachers)) : ?>
-        <h1 class="text-xl font-semibold text-gray-800">Total Teacher: <?= count($teachers) ?></h1>
+    <?php if (!empty($students) && is_array($students)) : ?>
+        <h1 class="text-xl font-semibold text-gray-800">Total Students: <?= count($students) ?></h1>
     <?php else : ?>
-        <p>No teachers found.</p>
+        <p>No students found.</p>
             <?php endif; ?>
         </div>
 
+        <a href="/"  class="bg-blue-300 p-6 rounded-lg shadow-md ">
+            <h2 class="text-xl font-semibold text-gray-800 text-center">Add Student +</h2>
+        </a>
         <div class="bg-white p-6 rounded-lg shadow-md">
             <h2 class="text-xl font-semibold text-gray-800">Card 3</h2>
-            <p class="text-gray-600 mt-2">Some content for the third card.</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-xl font-semibold text-gray-800">Card 4</h2>
             <p class="text-gray-600 mt-2">Some content for the third card.</p>
         </div>
         <div class="grid col-span-4 bg-white rounded-lg shadow-md text-gray-900 scroll-smooth">
@@ -36,26 +35,31 @@ require './view/partials/sidebar.php';
             <tr class="text-gray-900">
                 <th>No</th>
                 <th>Name</th>
-                <th>Hire Date</th>
-                <th>Subject</th>
+                <th>Date of Birth</th>
+                <th>phone</th>
                 <th>Action</th>
             </tr>
             </thead>
             <tbody>
         
                 <?php $i = 1; ?>
-                <?php foreach ($teachers as $teacher) : ?>
+                <?php foreach ($students as $student) : ?>
                     <tr >
                         <th><?= $i++ ?></th>
-                        <td ><?= $teacher['name'] ?></td>
-                        <td><?= $teacher['date_of_join'] ?></td>
-                        <td><?= $teacher['department'] ?></td>
+                        <td ><?= $student['name'] ?></td>
+                        <td><?= $student['email'] ?></td>
+                        <td><?= $student['phone'] ?></td>
                         <td>
                             <div class="dropdown">
-                            <div tabindex="0" class="btn m-1 btn-sm btn-success  text-white">Action</div>
+                            <div tabindex="0" class="btn m-1 btn-sm btn-success z-1 text-white mx-4">Action</div>
                             <ul tabindex="0" class="menu dropdown-content bg-white rounded-box z-[1] w-36 p-2 shadow border-2 font-bold">
-                                    <li class="hover:bg-red-500 rounded"><a>Delete</a></li>
-                                    <li class="hover:bg-gray-200 rounded"><a>Edit</a></li>
+                            <li  class="hover:bg-gray-200 rounded">
+
+                                <a href="/student?id=<?= $student['id'] ?>">Edit</a>
+
+                            
+                            </li>
+                            <li class="hover:bg-red-500 rounded"><a>Delete</a></li>
                                 </ul>
                             </div>
                         </td>

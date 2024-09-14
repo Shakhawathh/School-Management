@@ -18,14 +18,7 @@ require './view/partials/sidebar.php';
         <div class="bg-blue-300 p-6 rounded-lg shadow-md">
         <h1 class="text-xl font-semibold text-gray-800">Teacher: <?= count($teachers) ?></h1>
 
-        </div>
-        <div class="bg-yellow-200 p-6 rounded-lg shadow-md">
-        <h1 class="text-xl font-semibold text-gray-800">Attendance: <?= count($teachers) ?></h1>
-
-        </div>
-        <div class="bg-red-200 p-6 rounded-lg shadow-md">
-        <h1 class="text-xl font-semibold text-gray-800">Notice: <?= count($notices) ?></h1>
-
+       
         </div>
         <div class="grid col-span-4 bg-white rounded-lg shadow-md text-gray-900 scroll-smooth">
     <div class="overflow-y-auto h-[50rem]"> 

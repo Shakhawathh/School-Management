@@ -2,9 +2,9 @@
 
 $db = new Database();
 
-$students = $db->query("SELECT * FROM `students`  ")->fetchAll();
+$id = $_GET['id'];
 
-// dd($students);
+$student = $db->query("SELECT * FROM `students` Where id = $id  ")->fetch();
 
 $heading = 'Student';
 
