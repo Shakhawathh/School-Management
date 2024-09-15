@@ -20,8 +20,17 @@ require './view/partials/sidebar.php';
             <?php endif; ?>
         </div>
 
-        <a href="/"  class="bg-blue-300 p-6 rounded-lg shadow-md ">
-            <h2 class="text-xl font-semibold text-gray-800 text-center">Add Student +</h2>
+        <a href="#" onclick="my_modal_3.showModal()" class=" bg-blue-300 p-6 rounded-lg shadow-md ">
+                    <h2 class="text-xl font-semibold text-gray-800 text-center">Add Student +</h2>
+                    <dialog id="my_modal_3" class="modal">
+        <div class="modal-box">
+            <form method="dialog">
+            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+            </form>
+            <h3 class="text-lg font-bold">Hello!</h3>
+            <p class="py-4">Add the student data</p>
+        </div>
+         </dialog>
         </a>
         <div class="bg-white p-6 rounded-lg shadow-md">
             <h2 class="text-xl font-semibold text-gray-800">Card 3</h2>
