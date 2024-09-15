@@ -1,8 +1,10 @@
 <?php
 
-$db = new Database();
+$config = require('config.php');
 
-$teachers = $db->query("SELECT * FROM `teachers` WHERE 1")->fetchAll();
+$db = new Database($config['database']);
+
+$teachers = $db->query("SELECT * FROM `teachers`")->fetchAll();
 // dd($teachers);
 
 $heading = 'Teacher';

@@ -1,10 +1,19 @@
 <?php
 
-$db = new Database();
+$config = require('config.php');
+$db = new Database($config['database']);
+
+
+
+
 
 $id = $_GET['id'];
 
-$student = $db->query("SELECT * FROM `students` Where id = $id  ")->fetch();
+$query = "SELECT * FROM `students` Where id = :id  ";
+
+// dd($query);
+
+$student = $db->query($query,[':id'=> $id])->fetch();
 
 $heading = 'Student';
 

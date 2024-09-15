@@ -46,8 +46,8 @@ require './view/partials/sidebar.php';
                 <?php foreach ($students as $student) : ?>
                     <tr >
                         <th><?= $i++ ?></th>
-                        <td ><?= $student['name'] ?></td>
-                        <td><?= $student['email'] ?></td>
+                        <td ><?= $student['first_name'].' '.$student['last_name'] ?></td>
+                        <td><?= $student['date_of_birth'] ?></td>
                         <td><?= $student['phone'] ?></td>
                         <td>
                             <div class="dropdown">

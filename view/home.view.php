@@ -17,8 +17,9 @@ require './view/partials/sidebar.php';
         </div>
         <div class="bg-blue-300 p-6 rounded-lg shadow-md">
         <h1 class="text-xl font-semibold text-gray-800">Teacher: <?= count($teachers) ?></h1>
-
-       
+        </div>
+        <div class="bg-blue-300 p-6 rounded-lg shadow-md">
+        <h1 class="text-xl font-semibold text-gray-800">User: <?= count($users) ?></h1>
         </div>
         <div class="grid col-span-4 bg-white rounded-lg shadow-md text-gray-900 scroll-smooth">
     <div class="overflow-y-auto h-[50rem]"> 
@@ -30,7 +31,7 @@ require './view/partials/sidebar.php';
                 <th>Name</th>
                 <th>Email</th>
                 <th>Gender</th>
-                <th>Make a Admin</th>
+                <th>Admin</th>
             </tr>
             </thead>
             <tbody>
@@ -39,7 +40,7 @@ require './view/partials/sidebar.php';
                 <?php foreach ($users as $user) : ?>
                     <tr >
                         <th><?= $i++ ?></th>
-                        <td ><?= $user['first_name'].' '.$user['last_name'] ?></td>
+                        <td ><?= $user['username'] ?></td>
                         <td><?= $user['email'] ?></td>
                         <td><?= $user['role'] ?></td>
                         <td>

@@ -47,9 +47,9 @@ require './view/partials/sidebar.php';
                 <?php foreach ($teachers as $teacher) : ?>
                     <tr >
                         <th><?= $i++ ?></th>
-                        <td ><?= $teacher['name'] ?></td>
-                        <td><?= $teacher['date_of_join'] ?></td>
-                        <td><?= $teacher['department'] ?></td>
+                        <td ><?= $teacher['first_name'].' '.$teacher['last_name'] ?></td>
+                        <td><?= $teacher['hire_date'] ?></td>
+                        <td><?= $teacher['subject_specialty'] ?></td>
                         <td>
                             <div class="dropdown">
                             <div tabindex="0" class="btn m-1 btn-sm btn-success  text-white">Action</div>
