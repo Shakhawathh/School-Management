@@ -12,8 +12,17 @@ require './view/partials/sidebar.php';
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
 
-        <div class="bg-green-300 p-6 rounded-lg shadow-md">
-        <h1 class="text-xl font-semibold text-gray-800">Students: <?= count($students) ?></h1>
+        <div class="flex gap-3 bg-green-300 p-6 rounded-lg shadow-md justify-between-center">
+            <img src="/images/stu.png" alt="student-icon" class="w-20 "/>
+        <h1 class="text-2xl font-semibold text-gray-800 mt-4">Students: 
+        <span  class="text-3xl font-bold text-gray-800"><?= count($students) ?></span>
+        </h1>
+        </div>
+        <div class="flex gap-3 bg-green-300 p-6 rounded-lg shadow-md justify-between-center">
+        <h1 class="text-2xl font-semibold text-gray-800 mt-4">Notice: 
+        <span  class="text-3xl font-bold text-gray-800"><?= count($students) ?></span>
+        </h1>
+         <!-- <img src="/images/tec.png" alt="student-icon" class="w-20 "/> -->
         </div>
         <div class="bg-blue-300 p-6 rounded-lg shadow-md">
         <h1 class="text-xl font-semibold text-gray-800">Teacher: <?= count($teachers) ?></h1>

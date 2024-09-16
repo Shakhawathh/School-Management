@@ -64,7 +64,7 @@ require './view/partials/sidebar.php';
                             <ul tabindex="0" class="menu dropdown-content bg-white rounded-box z-[1] w-36 p-2 shadow border-2 font-bold">
                             <li  class="hover:bg-gray-200 rounded">
 
-                                <a href="/student?id=<?= $student['id'] ?>">Edit</a>
+                                <a href="/student?id=<?= $student['student_id'] ?>">Edit</a>
 
                             
                             </li>

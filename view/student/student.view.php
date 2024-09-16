@@ -20,10 +20,10 @@ require './view/partials/sidebar.php';
                     <th>phone</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="text-gray-900">
                 <tr>
-                    <td><?= $student['id'] ?></td>
-                    <td><?= $student['name'] ?></td>
+                    <td><?= $student['student_id'] ?></td>
+                    <td><?= $student['first_name'].' '.$student['last_name'] ?></td>
              
                     <td><?= $student['phone'] ?></td>
                     

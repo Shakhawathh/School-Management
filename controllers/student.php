@@ -5,15 +5,9 @@ $db = new Database($config['database']);
 
 
 
-
-
-$id = $_GET['id'];
-
-$query = "SELECT * FROM `students` Where id = :id  ";
-
 // dd($query);
 
-$student = $db->query($query,[':id'=> $id])->fetch();
+$student = $db->query("SELECT * FROM `students` Where student_id = :id ",['id' => $_GET['id'] ])->fetch();
 
 $heading = 'Student';
 
