@@ -5,11 +5,22 @@ $db = new Database($config['database']);
 
 
 
-// dd($query);
-
-$student = $db->query("SELECT * FROM `students` Where student_id = :id ",['id' => $_GET['id'] ])->fetch();
-
 $heading = 'Student';
+$currentUser = 4;
+
+
+$student = $db->query("SELECT * FROM `students` Where student_id = :id ",[
+    
+    'id' => $_GET['id'] ])->fetch();
+ 
+    if(!$student){
+        abort();
+    }
+
+
+    if ($student['user_id'] !== $currentUser) {
+    abort(403);
+}
 
 
 
