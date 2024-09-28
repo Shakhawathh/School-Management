@@ -41,8 +41,8 @@ require './view/partials/sidebar.php';
             <?= $_POST['last_name'] ??  '' ?>
         </div>
 
-            <?php if(isset($errors['last_name'])) : ?>
-                <p class="text-xm text-red-500"> <?= $errors['last_name'] ?></p>
+            <?php if(isset($errors['last_name '])) : ?>
+                <p class="text-xm text-red-500"> <?= $errors['last_name '] ?></p>
             <?php  endif; ?>  
         
         <!-- <div class="mb-4">
