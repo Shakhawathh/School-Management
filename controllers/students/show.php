@@ -24,4 +24,4 @@ $student = $db->query("SELECT * FROM `students` Where student_id = :id ",[
 
 
 
-require './view/student/student.view.php';
+require './view/students/show.view.php';

@@ -47,4 +47,4 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
    
 }
 
-require './view/student/student-create.view.php';
+require './view/students/create.view.php';

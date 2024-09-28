@@ -11,4 +11,4 @@ $heading = 'Students';
 
 
 
-require './view/student/students.view.php';
+require './view/students/index.view.php';
