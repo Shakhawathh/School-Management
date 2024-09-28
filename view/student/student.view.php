@@ -30,7 +30,7 @@ require './view/partials/sidebar.php';
                 </tr>
             </tbody>
         </table>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        <div  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
 
     <?php else : ?>
         <p>No student found.</p>

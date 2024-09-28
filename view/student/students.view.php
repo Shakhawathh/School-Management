@@ -19,9 +19,9 @@ require './view/partials/sidebar.php';
         <p>No students found.</p>
             <?php endif; ?>
         </div>
-    <div class="bg-green-300 p-6 rounded-lg shadow-md text-center ">
+    <div class="bg-red-500 p-6 rounded-lg shadow-md text-center border-dashed border-2 shadow-md ">
    
-    <h2 class="text-xl font-semibold text-gray-800 text-center">
+    <h2 class="text-3xl font-semibold text-gray-800 text-center ">
     <a href="/students/create" >Add Student +</a>
     </h2>
         </div>
