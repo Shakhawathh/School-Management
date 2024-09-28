@@ -4,12 +4,54 @@ require './view/partials/head.php';
 require './view/partials/nav.php';
 require './view/partials/sidebar.php';
 
+
+
+<?php
+require_once '../config/database.php';  // Adjust the path as needed
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Collect form data
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $date_of_birth = $_POST['date_of_birth'];
+    $gender = $_POST['gender'];
+    $address = $_POST['address'];
+    $phone = $_POST['phone'];
+    $enrollment_date = $_POST['enrollment_date'];
+
+    // Prepare SQL statement
+    $sql = "INSERT INTO students (first_name, last_name, date_of_birth, gender, address, phone, enrollment_date) 
+            VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sssssss", $first_name, $last_name, $date_of_birth, $gender, $address, $phone, $enrollment_date);
+
+    // Execute the statement
+    if ($stmt->execute()) {
+        // Redirect to a success page or back to the form with a success message
+        header("Location: /view/student/student-create.view.php?success=1");
+        exit();
+    } else {
+        // Redirect back to the form with an error message
+        header("Location: /view/student/student-create.view.php?error=1");
+        exit();
+    }
+
+    $stmt->close();
+    $conn->close();
+} else {
+    // If not a POST request, redirect back to the form
+    header("Location: /view/student/student-create.view.php");
+    exit();
+}
+?>
+
 ?>
 
 <main class="flex-1 p-10">
     <h1 class="text-3xl font-bold text-gray-800 mb-6"><?= $heading ?></h1>
     
-    <form action="/students/create" method="POST" class="max-w-lg">
+    <form action="/controllers/create_student.php" method="POST" class="max-w-lg">
         <div class="mb-4">
             <label for="first_name" class="block text-gray-700 font-bold mb-2">First Name</label>
             <input type="text" id="first_name" name="first_name" required class="w-full px-3 py-2 border rounded-lg">
