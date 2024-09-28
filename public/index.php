@@ -2,9 +2,12 @@
 
 const BASE_PATH = __DIR__ . '/../';
 
-require 'function.php';
-require 'Database.php';
-require 'route.php';
+
+require BASE_PATH . 'function.php';
+
+require base_path('Database.php')  ;
+require base_path('route.php')  ;
+
 
 
 

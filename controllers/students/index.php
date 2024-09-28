@@ -11,4 +11,5 @@ $heading = 'Students';
 
 
 
-require './view/students/index.view.php';
+require base_path( './view/students/index.view.php');
+ 

@@ -1,8 +1,8 @@
 <?php
 
-require './view/partials/head.php';
-require './view/partials/nav.php';
-require './view/partials/sidebar.php';
+require base_path('./view/partials/head.php');
+require base_path('./view/partials/nav.php');
+require base_path('./view/partials/sidebar.php');
 
 ?>
 
@@ -73,5 +73,5 @@ require './view/partials/sidebar.php';
 </main>
 
 <?php
-require './view/partials/footer.php';
+require base_path('./view/partials/footer.php'); 
 ?>
