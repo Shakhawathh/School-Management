@@ -1,14 +1,8 @@
 <?php
 
-<<<<<<< HEAD
 require base_path('./view/partials/head.php') ;
 require base_path('./view/partials/nav.php') ;
 require base_path('./view/partials/sidebar.php') ;
-=======
-require base_path('./view/partials/head.php');
-require base_path('./view/partials/nav.php');
-require base_path('./view/partials/sidebar.php');
->>>>>>> 28bb6ddd0c7e199d2ef48f769cbe7b34ed85f67f
 
 ?>
 
@@ -19,9 +13,9 @@ require base_path('./view/partials/sidebar.php');
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
 
         <div class="flex gap-3 bg-green-300 p-6 rounded-lg shadow-md justify-between-center">
-            <img src="/images/stu.png" alt="student-icon" class="w-20 "/>
+            <!-- <img src="/images/stu.png" alt="student-icon" class="w-20 "/> -->
         <h1 class="text-2xl font-semibold text-gray-800 mt-4">Students: 
-        <span  class="text-3xl font-bold text-gray-800"><?= count($students) ?></span>
+        <span  class="text-xl font-bold text-gray-800"><?= count($students) ?></span>
         </h1>
         </div>
         <div class="flex gap-3 bg-green-300 p-6 rounded-lg shadow-md justify-between-center">
@@ -79,9 +73,5 @@ require base_path('./view/partials/sidebar.php');
 </main>
 
 <?php
-<<<<<<< HEAD
 require base_path( './view/partials/footer.php');
-=======
-require base_path('./view/partials/footer.php'); 
->>>>>>> 28bb6ddd0c7e199d2ef48f769cbe7b34ed85f67f
 ?>

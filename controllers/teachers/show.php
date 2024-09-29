@@ -18,6 +18,9 @@ $teacher = $db->query("SELECT * FROM `teachers` Where teacher_id = :id ",[
     }
 
 
+    if ($teacher['user_id'] !== $currentUser) {
+    abort(403);
+}
 
 
 view('teacher/show',[
