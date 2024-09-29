@@ -1,14 +1,18 @@
 <?php
 
-$config = require('config.php');
+$config = require  base_path('config.php');
 $db = new Database($config['database']);
 
 $students = $db->query("SELECT * FROM `students`  ")->fetchAll();
 
-// dd($students);
 
-$heading = 'Students';
-
+// $heading = 'Students';
 
 
-require './view/students/index.view.php';
+
+ view('students/index',
+
+[
+    'heading'=>'Students',
+    'students'=> $students
+]);

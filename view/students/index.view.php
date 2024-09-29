@@ -1,11 +1,10 @@
 <?php
 
-require './view/partials/head.php';
-require './view/partials/nav.php';
-require './view/partials/sidebar.php';
+require base_path('./view/partials/head.php') ;
+require base_path('./view/partials/nav.php') ;
+require base_path('./view/partials/sidebar.php') ;
 
 ?>
-
 <main class="flex-1 p-10">
     <h1 class="text-3xl font-bold text-gray-800"><?= $heading ?></h1>
 
@@ -77,6 +76,6 @@ require './view/partials/sidebar.php';
     </div>
 </main>
 
-<?php
-require './view/partials/footer.php';
+<?php 
+require base_path( './view/partials/footer.php');
 ?>

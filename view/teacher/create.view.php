@@ -33,7 +33,7 @@ require base_path('./view/partials/sidebar.php') ;
             name="last_name" 
              
             class="w-full text-black px-3 py-2 border rounded-lg bg-white">
-            <?= $_POST['last_name'] ??  '' ?>
+       
         </div>
 
             <?php if(isset($errors['last_name '])) : ?>
@@ -92,14 +92,24 @@ require base_path('./view/partials/sidebar.php') ;
         </div>
         
         <!-- <div class="mb-4">
-            <label for="enrollment_date" class="block text-gray-700 font-bold mb-2">Enrollment Date</label>
-            <input type="date" id="enrollment_date" name="enrollment_date" required class="w-full text-black px-3 py-2 border rounded-lg bg-white">
+            <label for="hire_date" class="block text-gray-700 font-bold mb-2">hire_date</label>
+            <input type="date" id="hire_date" name="hire_date" required class="w-full text-black px-3 py-2 border rounded-lg bg-white">
         </div> -->
+        
+        <div class="mb-4">
+            <label for="phone" class="block text-gray-700 font-bold mb-2">subject_specialty</label>
+            <input 
+            type="tel" 
+            id="subject_specialty" 
+            name="subject_specialty" 
+            required 
+            class="w-full text-black px-3 py-2 border rounded-lg bg-white">
+        </div>
         
         <div>
             <button 
             type="submit" 
-            class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Create Student</button>
+            class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">Create Teacher</button>
         </div>
     </form>
 </main>

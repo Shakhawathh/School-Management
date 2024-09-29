@@ -6,11 +6,10 @@ require base_path('./view/partials/sidebar.php') ;
 
 ?>
 
-
 <main class="flex-1 p-10">
     <h1 class="text-3xl font-bold text-gray-800"><?= $heading ?></h1>
 
-    <?php if (!empty($student) && is_array($student)) : ?>
+    <?php if (!empty($teacher) && is_array($teacher)) : ?>
 
         <table class="table">
             <thead>
@@ -23,10 +22,10 @@ require base_path('./view/partials/sidebar.php') ;
             </thead>
             <tbody class="text-gray-900">
                 <tr>
-                    <td><?= $student['student_id'] ?></td>
-                    <td><?= $student['first_name'].' '.$student['last_name'] ?></td>
+                    <td><?= $teacher['teacher_id'] ?></td>
+                    <td><?= $teacher['first_name'].' '.$teacher['last_name'] ?></td>
              
-                    <td><?= $student['phone'] ?></td>
+                    <td><?= $teacher['phone'] ?></td>
                     
                 </tr>
             </tbody>
@@ -34,7 +33,7 @@ require base_path('./view/partials/sidebar.php') ;
         <div  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
 
     <?php else : ?>
-        <p>No student found.</p>
+        <p>No teacher found.</p>
     <?php endif; ?>
 </main>
 

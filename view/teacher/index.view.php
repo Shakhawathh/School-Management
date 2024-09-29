@@ -1,8 +1,8 @@
 <?php
 
-require './view/partials/head.php';
-require './view/partials/nav.php';
-require './view/partials/sidebar.php';
+require base_path('./view/partials/head.php') ;
+require base_path('./view/partials/nav.php') ;
+require base_path('./view/partials/sidebar.php') ;
 
 ?>
 
@@ -20,10 +20,12 @@ require './view/partials/sidebar.php';
             <?php endif; ?>
         </div>
 
-        <div class="bg-white p-6 rounded-lg shadow-md">
-            <h2 class="text-xl font-semibold text-gray-800">Card 3</h2>
-            <p class="text-gray-600 mt-2">Some content for the third card.</p>
-        </div>
+        <div class="bg-red-500 p-6 rounded-lg shadow-md text-center border-dashed border-2 shadow-md ">
+   
+   <h2 class="text-3xl font-semibold text-gray-800 text-center ">
+   <a href="/teachers/create" >Add Teacher +</a>
+   </h2>
+       </div>
         <div class="bg-white p-6 rounded-lg shadow-md">
             <h2 class="text-xl font-semibold text-gray-800">Card 4</h2>
             <p class="text-gray-600 mt-2">Some content for the third card.</p>
@@ -52,10 +54,15 @@ require './view/partials/sidebar.php';
                         <td><?= $teacher['subject_specialty'] ?></td>
                         <td>
                             <div class="dropdown">
-                            <div tabindex="0" class="btn m-1 btn-sm btn-success  text-white">Action</div>
+                            <div tabindex="0" class="btn m-1 btn-sm btn-success z-1 text-white mx-4">Action</div>
                             <ul tabindex="0" class="menu dropdown-content bg-white rounded-box z-[1] w-36 p-2 shadow border-2 font-bold">
-                                    <li class="hover:bg-red-500 rounded"><a>Delete</a></li>
-                                    <li class="hover:bg-gray-200 rounded"><a>Edit</a></li>
+                            <li  class="hover:bg-gray-200 rounded">
+
+                                <a href="/teacher?id=<?= $teacher['teacher_id'] ?>">Edit</a>
+
+                            
+                            </li>
+                            <li class="hover:bg-red-500 rounded"><a>Delete</a></li>
                                 </ul>
                             </div>
                         </td>
@@ -69,6 +76,6 @@ require './view/partials/sidebar.php';
     </div>
 </main>
 
-<?php
-require './view/partials/footer.php';
+<?php 
+require base_path( './view/partials/footer.php');
 ?>

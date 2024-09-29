@@ -14,3 +14,15 @@ function urlIs($value)
 {
     return $_SERVER['REQUEST_URI'] === $value;
 }
+
+
+function base_path ($path)
+{
+    return BASE_PATH . $path;
+}
+
+function view ($path , $data= [])
+{
+    extract($data);
+    require base_path("view/{$path}.view.php");
+}

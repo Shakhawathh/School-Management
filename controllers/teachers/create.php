@@ -6,9 +6,8 @@ $config = require  base_path('config.php');
 $db = new Database($config['database']);
 
 
-// $heading = 'Add Student';
-
 $errors = [];
+
 
 if($_SERVER['REQUEST_METHOD'] === 'POST') {
   
@@ -25,8 +24,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
    
     if(empty($errors)) { 
 
-        $db->query('INSERT INTO students (user_id, first_name, last_name, date_of_birth, gender, address, phone, enrollment_date)
-        values (:user_id, :first_name, :last_name, :date_of_birth, :gender, :address, :phone, :enrollment_date) ', [
+        $db->query('INSERT INTO teachers (user_id, first_name, last_name, date_of_birth, gender, address, phone, hire_date,subject_specialty)
+        values (:user_id, :first_name, :last_name, :date_of_birth, :gender, :address, :phone, :hire_date,:subject_specialty) ', [
             // 'user_id' => $_SESSION['user']['id'],
             'user_id' => random_int(6, 26 ),
             'first_name' => $_POST['first_name'],
@@ -35,10 +34,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
             'gender' => $_POST['gender'],
             'address' => $_POST['address'], 
             'phone' => $_POST['phone'],
-            'enrollment_date' => 22/10/2022,
+            'hire_date' => 22/10/2022,
+            'subject_specialty'=>$_POST['subject_specialty'],
         ]);
     
-        header('location: /students');  
+        header('location: /teachers');  
     }
 
 
@@ -47,9 +47,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
    
 }
 
-view('students/create',
+view('teacher/create',
 [
     'heading'=>'Add Student',
     'errors' => $errors
 ]);
+
 

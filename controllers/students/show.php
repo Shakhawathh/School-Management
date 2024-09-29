@@ -1,11 +1,10 @@
 <?php
 
-$config = require('config.php');
+$config = require  base_path('config.php');
 $db = new Database($config['database']);
 
 
-
-$heading = 'Student';
+// $heading = 'Student';
 $currentUser = 4;
 
 
@@ -24,4 +23,8 @@ $student = $db->query("SELECT * FROM `students` Where student_id = :id ",[
 
 
 
-require './view/students/show.view.php';
+ view('students/show',
+[
+    'heading'=>'Student',
+    'student'=>$student
+]) ;
