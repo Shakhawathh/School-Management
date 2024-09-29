@@ -53,19 +53,13 @@ require base_path('./view/partials/sidebar.php') ;
                         <td><?= $student['date_of_birth'] ?></td>
                         <td><?= $student['phone'] ?></td>
                         <td>
-                            <div class="dropdown">
-                            <div tabindex="0" class="btn m-1 btn-sm btn-success z-1 text-white mx-4">Action</div>
-                            <ul tabindex="0" class="menu dropdown-content bg-white rounded-box z-[1] w-36 p-2 shadow border-2 font-bold">
-                            <li  class="hover:bg-gray-200 rounded">
-
-                                <a href="/student?id=<?= $student['student_id'] ?>">Edit</a>
-
-                            
-                            </li>
-                            <li class="hover:bg-red-500 rounded"><a>Delete</a></li>
-                                </ul>
-                            </div>
+                            <a
+                             class="btn m-1 btn-sm bg-green-300 z-1 text-black font-bold mx-4 hover:bg-green-400" 
+                             href="/student?id=<?= $student['student_id'] ?>">
+                             Detail
+                            </a>
                         </td>
+                       
                     </tr>
                 <?php endforeach; ?>
             </tbody>
