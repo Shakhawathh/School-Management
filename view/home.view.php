@@ -1,8 +1,14 @@
 <?php
 
+<<<<<<< HEAD
 require base_path('./view/partials/head.php') ;
 require base_path('./view/partials/nav.php') ;
 require base_path('./view/partials/sidebar.php') ;
+=======
+require base_path('./view/partials/head.php');
+require base_path('./view/partials/nav.php');
+require base_path('./view/partials/sidebar.php');
+>>>>>>> 28bb6ddd0c7e199d2ef48f769cbe7b34ed85f67f
 
 ?>
 
@@ -73,5 +79,9 @@ require base_path('./view/partials/sidebar.php') ;
 </main>
 
 <?php
+<<<<<<< HEAD
 require base_path( './view/partials/footer.php');
+=======
+require base_path('./view/partials/footer.php'); 
+>>>>>>> 28bb6ddd0c7e199d2ef48f769cbe7b34ed85f67f
 ?>
