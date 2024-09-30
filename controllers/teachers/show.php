@@ -6,8 +6,9 @@ $db = new Database($config['database']);
 
 
 
-$currentUser = 4;
+$currentUser = 1;
 
+// dd($_SERVER['REQUEST_URI']);
 
 $teacher = $db->query("SELECT * FROM `teachers` Where teacher_id = :id ",[
     
