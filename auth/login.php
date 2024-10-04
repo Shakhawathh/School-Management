@@ -1,39 +1,36 @@
 <?php
-// Start the session
-session_start();
 
-require "../Database.php";
+$config = require base_path('config.php');
+$db = new Database($config['database']);
+
+$error = '';
 
 
+
+$config = require base_path('config.php');
+$db = new Database($config['database']);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $password = $_POST['password'];
 
-    // Prepare and execute the query
-    $stmt = $conn->prepare("SELECT id, password FROM users WHERE email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    $user = $db->query("SELECT * FROM users WHERE email = :email", [
+        'email' => $email
+    ])->fetch();
 
-    if ($result->num_rows == 1) {
-        $user = $result->fetch_assoc();
-        if (password_verify($password, $user['password'])) {
-            // Login successful
-            $_SESSION['user_id'] = $user['id'];
-            header("Location: index.php"); // Redirect to dashboard
-            exit();
-        } else {
-            $error = "Invalid email or password";
-        }
+    if ($user && password_verify($password, $user['password'])) {
+        // Login successful
+        $_SESSION['user_id'] = $user['id'];
+        $_SESSION['username'] = $user['username'];
+        $_SESSION['role'] = $user['role'];
+
+        header("Location: /");
+        exit();
     } else {
         $error = "Invalid email or password";
     }
-
-    $stmt->close();
 }
 
-$conn->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,10 +45,10 @@ $conn->close();
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="w-full max-w-sm p-8 space-y-6 bg-white shadow-lg rounded-lg">
         <h2 class="text-2xl font-bold text-center text-gray-700">Login</h2>
-        <?php if (isset($error)) { ?>
+        <?php if (!empty($error)) { ?>
             <div class="alert alert-error"><?php echo $error; ?></div>
         <?php } ?>
-        <form class="space-y-4" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <form class="space-y-4" method="POST" action="">
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
                 <input type="email" id="email" name="email" placeholder="john.doe@example.com"
@@ -65,11 +62,11 @@ $conn->close();
             </div>
 
             <div>
-                <button type="submit" class="btn btn-primary w-full">Login</button>
+                <button type="submit" name="submit" class="btn btn-primary w-full">Login</button>
             </div>
 
             <div class="text-center">
-                <p class="text-sm">Don't have an account? <a href="register.php"
+                <p class="text-sm">Don't have an account? <a href="/register"
                         class="text-blue-500 hover:underline">Registration</a>
                 </p>
             </div>

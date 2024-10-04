@@ -27,8 +27,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $db->query('INSERT INTO students (user_id, first_name, last_name, date_of_birth, gender, address, phone, enrollment_date)
         values (:user_id, :first_name, :last_name, :date_of_birth, :gender, :address, :phone, :enrollment_date) ', [
-            // 'user_id' => $_SESSION['user']['id'],
-            'user_id' => 1,
+            'user_id' => $_SESSION['user']['id'],
+            // 'user_id' => 1,
             'first_name' => $_POST['first_name'],
             'last_name' => $_POST['last_name'],
             'date_of_birth' => 22/10/2022,

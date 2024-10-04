@@ -21,7 +21,7 @@ require base_path('./view/partials/sidebar.php') ;
             </thead>
             <tbody class="text-gray-900">
                 <?php foreach ($teacher as $key => $teacher) : ?>
-                    <?= var_dump($teacher) ?>
+                  
 
                 <tr>
                     <td><?= $key + 1 ?></td>

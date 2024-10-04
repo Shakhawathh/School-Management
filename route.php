@@ -1,4 +1,5 @@
 <?php
+session_start();
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 
@@ -16,9 +17,12 @@ $routes = [
   
     '/login' => 'auth/login.php',
     '/register' => 'auth/register.php',
+    '/logout' => 'auth/logout.php',
 ];
 
-
+function isLoggedIn() {
+    return isset($_SESSION['user_id']);
+}
 
 function routeController($uri, $routes)
 {
